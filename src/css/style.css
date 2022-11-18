@@ -1,0 +1,380 @@
+html {
+    font-family: Inter var,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    height: 100vh;
+}
+
+.splashScreen {
+    text-align:center;
+    transition: 0.5s;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    top: 0;
+    padding-top: 60px;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+#splashScreen.fadeout {
+    -webkit-animation: fadeout .2s linear forwards;
+    animation: fadeout .2s linear forwards;
+}
+
+#splashScreen.fadein {
+    -webkit-animation: fadein .8s linear forwards;
+    animation: fadein .8s linear forwards;
+}
+
+@-webkit-keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;} 
+}
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;} 
+}
+
+@-webkit-keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;} 
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;} 
+}
+
+html.theme_dark .splashScreen {
+    background-color: black;
+}
+
+#main {
+    text-align:center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    top: 0;
+    padding-top: 60px;
+    z-index: 0;
+}
+
+html.theme_dark #main {
+    background-color: black;
+}
+
+html.theme_light .txt {
+    color: #000;
+    transition: 0.5s;
+}
+
+html.theme_dark .txt {
+    color: white;
+    transition: 0.5s;
+}
+
+.roundHistory {
+    transition: 0.5s;
+}
+
+html.theme_light .roundHistory {
+    color: #000;
+}
+
+html.theme_dark .roundHistory {
+    color: white;
+}
+
+#counter {
+    border: 0;
+    max-width: 11rem;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+#counter button {
+    background: white
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><path d="M17 25h16M67 25h16M75 17v16" fill="none" stroke="rgb(59,69,66)" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" /></svg>')
+        no-repeat 0 0;
+    height: 2.8rem;
+    transition: opacity 0.15s;
+    cursor: pointer;
+    width: 2.8rem;
+    opacity: 0.5;
+    border: 0;
+    border-radius: 1.4rem;
+    padding: 0;
+    position: absolute;
+    top: 0.6rem;
+    background-size: 5.6rem 2.8rem;
+    display: block;
+    margin: 0;
+}
+
+#counter input {
+    font-weight: lighter;
+    padding: 0 4rem;
+    background: white;
+    box-shadow: 0 10px 65px -10px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: 0;
+    font-size: 18px;
+    color: #222;
+    box-sizing: border-box;
+    border-left: 1;
+}
+
+#counter input:focus {
+    outline: none;
+    box-shadow: 0 5px 55px -10px rgba(0, 0, 0, 0.2), 0 0 4px #3fb0ff;
+}
+
+#counter input[type=number]::-webkit-inner-spin-button,
+#counter input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#counter button:active {
+    background-position-y: 1px;
+    box-shadow: inset 0 2px 12px -4px #c5d1d9;
+}
+
+#counter button:focus {
+    outline: none;
+}
+
+#counter button:hover {
+    opacity: 1;
+}
+
+#counter button.sub {
+    left: 0.6rem;
+}
+
+#counter button.add {
+    right: 0.6rem;
+    background-position-x: -2.8rem;
+}
+
+.shakeContainer {
+    animation: shakerightleft 1s;
+    -webkit-animation: shakerightleft 1s;
+}
+
+@-webkit-keyframes shakerightleft {
+    from, to {
+        transform: translateX(0);
+    }
+    40%, 80% {
+        transform: translateX(-1rem);
+    }
+    20%, 60% {
+        transform: translateX(1rem);
+    }
+}
+
+@keyframes shakerightleft {
+    from, to {
+        transform: translateX(0);
+    }
+    40%, 80% {
+        transform: translateX(-1rem);
+    }
+    20%, 60% {
+        transform: translateX(1rem);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.button {
+    padding: 16px 32px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 15px;
+    margin: 4px 2px;
+}
+
+.button-primary {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+.button-secondary {
+    background-color: #008CBA; 
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: white;
+    color: #008CBA;
+}
+
+.button-danger {
+    background-color: red; 
+    color: white;
+}
+
+.button-danger:hover {
+    background-color: white;
+    color: red;
+}
+
+.toggle {
+    display: inline-block;
+    width: 60px;
+    position: relative;
+    height: 34px;
+}
+
+.toggle input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    right: 0;
+    -webkit-transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: yellow;
+}
+
+.toggleSlider:before {
+    content: "";
+    -webkit-transition: 0.5s;
+    left: 4px;
+    height: 26px;
+    transition: 0.5s;
+    background-color: white;
+    position: absolute;
+    bottom: 4px;
+    width: 26px;
+}
+
+input:checked + .toggleSlider {
+    background-color: black;
+}
+
+html.theme_dark input:checked + .toggleSlider {
+    background-color: #222;
+}
+
+input:focus + .toggleSlider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggleSlider:before {
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+}
+
+.toggleSlider.round {
+    border-radius: 34px;
+}
+
+.toggleSlider.round:before {
+    border-radius: 50%;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.inline-center {
+    align-items: center;
+    justify-content: center;
+}
+
+div.padded {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 100px;
+}
+
+#toggleTxt {
+    padding-left: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+#scoreBoard {
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.pt-5 {
+    padding-top: 5px;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+.pr-5 {
+    padding-right: 5px;
+}
+
+#stats.animate {
+    animation: blinking 0.5s linear forwards;
+    -webkit-animation: blinking 0.5s linear forwards;
+}
+
+@-webkit-keyframes blinking {
+    from, 66% {
+        opacity: 0;
+    }
+    33%, to {
+        opacity: 1;
+    }
+}
+
+@keyframes blinking {
+    from, 66% {
+        opacity: 0;
+    }
+    33%, to {
+        opacity: 1;
+    }
+}
