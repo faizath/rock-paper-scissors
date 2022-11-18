@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="none" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="src/css/style.css">
+    </head>
+    <body>
+        <content id="main">
+            <div id="scoreBoard">
+                <div class="center pt-5">
+                  <h1 class="txt"><span id="playerScore">0</span>&nbsp;-&nbsp;<span id="botScore">0</span></h1>
+                </div>
+                <label class="txt">Player - Bot</label><br>
+                <label class="txt" id="stats"><span style="color:black;">_</span></label>
+            </div><br><br>
+            <label class="txt">Round left: <span id="roundLeft"></span></label>
+            <div class="center pt-5">
+                <button class="button button-secondary action">Rock</button><button class="button button-secondary action">Paper</button><button class="button button-secondary action">Scissors</button>
+            </div>
+            <button class="button button-primary" id="menu">Menu</button>
+            <button class="button button-primary hidden" id="end">End Game</button>
+            <div id="mainDarkModeContainer"></div>
+        </content>
+        <div class="splashScreen">
+            <content id="splashScreen">
+                <h1 class="txt">Rock Paper Scissors</h1>
+                <p class="txt">by <a class="txt" href="https://github.com/faizath">faizath</a></p><br>
+                <label class="txt">Round count:</label>
+                <div class="center pt-5">
+                    <fieldset id="counter">
+                        <button type="button-quantity" class="sub"></button>
+                        <input type="number" id="quantity" pattern="[0-9]+" value="1">
+                        <button type="button-quantity" class="add"></button>
+                    </fieldset>
+                </div>
+                <label id="zeroReference" class="txt hidden">0 means the round is unlimited</label><br><br>
+                <button class="button button-primary" id="start">Start</button>
+                <button class="button button-secondary" id="source">Source Code</button>
+                <br>
+                <div id="splashDarkModeContainer">
+                    <div class="center pt-5" id="darkModeContainer">
+                        <label class="toggle">
+                            <input type="checkbox" id="darkMode" data-toggled="false">
+                            <span class="toggleSlider round"></span>
+                        </label>
+                        <label id="toggleTxt" class="txt">Dark Mode Toggle</label>
+                    </div>
+                </div>
+                <br>
+                <h2 class="txt">Game History</h2>
+                <div class="center padded txt pt-5">
+                    <table>
+                    </table>
+                </div>
+            </content>
+        </div>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>   
